@@ -15,7 +15,7 @@ Welcome to the **Weather Website** repository! This is a simple web application 
 - **OpenWeather API**: For fetching real-time weather data (API key required).
 
 ## Demo 🎬
-You can try out the live demo of the Weather Website [here](https://1306pnjc.github.io/PRODIGY_WD_05/) *(replace this with your actual demo link if available)*.
+You can try out the live demo of the Weather Website [here](https://1306pnjc.github.io/PRODIGY_WD_05/).
 
 ## Setup & Installation ⚙️
 
