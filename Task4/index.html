@@ -1,53 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>KnowYourWeather</title>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" type="icon" href="Images/logo.jpeg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aether — Weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Dynamic photo backdrop -->
+  <div class="bg-scene" id="bgScene"></div>
+  <div class="bg-overlay"></div>
+  <div class="bg-tint" id="bgTint"></div>
+
   <main class="container">
+
+    <header class="card-header">
+      <span class="brand-vi">VI</span>
+      <span class="brand-name">Aether</span>
+      <span class="brand-tag">/ Weather</span>
+    </header>
+
     <div class="search-box">
-      <i class='bx bxs-map bx-tada'></i>
-      <input type="text" placeholder="Enter Location">
-      <button class="bx bx-search"></button>
+      <i class='bx bxs-map search-icon'></i>
+      <input type="text" placeholder="City, Country…" id="locationInput" />
+      <button class="search-btn" id="searchBtn">
+        <i class='bx bx-search'></i>
+      </button>
     </div>
 
-    <div class="weather-box">
-      <div class="box">
-        <div class="info-weather">
-          <div class="weather">
-            <img src="">
-            <p class="temp"><span>°C</span></p>
-            <p class="description"></p>
-          </div>
-        </div>
+    <div class="weather-box" id="weatherBox">
+      <div class="empty-state">
+        <i class='bx bx-globe'></i>
+        <p>Search a location<br />to see conditions</p>
       </div>
     </div>
 
-    <div class="weather-details">
-      <div class="humidity">
+    <div class="weather-details" id="weatherDetails" style="display:none">
+      <div class="detail-card">
         <i class='bx bx-water'></i>
-        <div class="text">
-          <div class="info-humidity">
-            <span>%</span>
-          </div>
-          <p>Humidity</p>
-        </div>
+        <span class="detail-value" id="humidityVal">—</span>
+        <span class="detail-label">Humidity</span>
       </div>
-
-      <div class="wind">
+      <div class="detail-divider"></div>
+      <div class="detail-card">
         <i class='bx bx-wind'></i>
-        <div class="text">
-          <div class="info-wind">
-            <span>%</span>
-          </div>
-          <p>Wind Speed</p>
-        </div>
+        <span class="detail-value" id="windVal">—</span>
+        <span class="detail-label">Wind</span>
+      </div>
+      <div class="detail-divider"></div>
+      <div class="detail-card">
+        <i class='bx bx-thermometer'></i>
+        <span class="detail-value" id="feelsVal">—</span>
+        <span class="detail-label">Feels like</span>
       </div>
     </div>
+
   </main>
 
   <script src="script.js"></script>
